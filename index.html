@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansible Automation for SMBs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        .form-group {
+            margin: 15px 0;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🚀 Automate IT Tasks with No-Code Ansible</h1>
+        <p>Tired of manual IT management? Our cloud-based Ansible automation platform simplifies patching, security updates, and compliance—no scripting required.</p>
+
+        <!-- Step 1: Email Signup Form -->
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="email">📩 Enter your email to join the waitlist:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <button type="submit">Join the Waitlist 🚀</button>
+        </form>
+
+        <!-- Step 2: Survey Form (Initially Hidden) -->
+        <form id="survey-form" class="hidden">
+            <h2>📊 Help Us Understand Your Needs</h2>
+
+            <div class="form-group">
+                <label for="company-size">🔹 What best describes your company size?</label>
+                <select id="company-size" name="company-size" required>
+                    <option value="">Select one</option>
+                    <option value="1-10">1-10 employees</option>
+                    <option value="11-50">11-50 employees</option>
+                    <option value="51-200">51-200 employees</option>
+                    <option value="201-500">201-500 employees</option>
+                    <option value="500+">500+ employees</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="it-staff">🔹 How many IT personnel are in your company?</label>
+                <select id="it-staff" name="it-staff" required>
+                    <option value="">Select one</option>
+                    <option value="1">1 (Solo IT admin)</option>
+                    <option value="2-5">2-5</option>
+                    <option value="6-15">6-15</option>
+                    <option value="16-50">16-50</option>
+                    <option value="51+">51+</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>🔹 What IT tasks do you want to automate?</label><br>
+                <input type="checkbox" name="tasks" value="Patch Management"> Patch Management<br>
+                <input type="checkbox" name="tasks" value="Security & Compliance"> Security & Compliance (CIS hardening, firewall rules)<br>
+                <input type="checkbox" name="tasks" value="Backup & Disaster Recovery"> Backup & Disaster Recovery<br>
+                <input type="checkbox" name="tasks" value="Software Deployment"> Software Deployment<br>
+                <input type="checkbox" name="tasks" value="User & Access Management"> User & Access Management<br>
+                <input type="checkbox" name="tasks" value="Other"> Other (Please specify)<br>
+            </div>
+
+            <div class="form-group">
+                <label for="manual-service">🔹 Would you be interested in a manual IT automation service before full product launch?</label>
+                <select id="manual-service" name="manual-service" required>
+                    <option value="">Select one</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Maybe">Maybe, tell me more</option>
+                </select>
+            </div>
+
+            <button type="submit">Submit & Get Early Access ✅</button>
+        </form>
+
+        <!-- Confirmation Message (Initially Hidden) -->
+        <div id="confirmation-message" class="hidden">
+            <h2>✅ Thank You!</h2>
+            <p>You’re now on the waitlist. We’ll email you soon with early access details!</p>
+        </div>
+    </div>
+
+    <script>
+        // Handle form submission
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("signup-form").classList.add("hidden");
+            document.getElementById("survey-form").classList.remove("hidden");
+        });
+
+        document.getElementById("survey-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("survey-form").classList.add("hidden");
+            document.getElementById("confirmation-message").classList.remove("hidden");
+        });
+    </script>
+
+</body>
+</html>
+
